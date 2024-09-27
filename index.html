@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Temperatura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Monitor de Temperatura</h1>
+    </header>
+
+    <main>
+        <section id="sensor">
+            <h2>Dados do Sensor</h2>
+            <p>Temperatura atual: <span id="temperatura">25°C</span></p>
+            <button id="atualizar">Atualizar</button>
+        </section>
+    </main>
+
+    <script>
+        // Função para simular a atualização da temperatura
+        function atualizarTemperatura() {
+            const temperatura = Math.floor(Math.random() * 35); // Temperatura aleatória de 0 a 34
+            document.getElementById('temperatura').innerText = `${temperatura}°C`;
+        }
+
+        // Evento de clique para o botão de atualizar
+        document.getElementById('atualizar').addEventListener('click', atualizarTemperatura);
+    </script>
+
+</body>
+
+
+</html>
